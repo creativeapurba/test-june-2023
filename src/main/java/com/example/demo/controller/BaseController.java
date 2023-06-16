@@ -6,8 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class BaseController {
 
+	@GetMapping("/")
+	public String startPage() {
+		return "App is running";
+	}
 	@GetMapping("/home")
 	public String getHome() {
-		return "Hello from SpringBoot";
+		return "Home route from SpringBoot";
 	}
 }
